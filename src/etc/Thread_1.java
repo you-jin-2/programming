@@ -1,20 +1,18 @@
 package etc;
+ 
 
-import java.util.Iterator;
-
-public class thread implements Runnable {
-
+public class Thread_1 implements Runnable {
 	
-	static int a = 0; 
+	static int a = 0;
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	    thread runnable = new thread();
-	    Thread thread = new Thread(runnable);
+	    Thread_1 runnable = new Thread_1();
+	    Thread_1 thread = new Thread_1();
 
 	    //start() 메서드를 이용하여 Thread를 실행
-	    thread.start();
 	     try {
+	    	 thread.run();
+	    	 thread.run();
 	    	 a++;thread.run();	
 	    	 a++;thread.run();
 	    	 a++;thread.run();
@@ -28,13 +26,19 @@ public class thread implements Runnable {
     @Override
     public synchronized void  run() {
         // 쓰레드가 실행할 작업 정의
-    	
     	System.out.println();
     	for (int i = 0; i < 100; i++) {
     		System.out.print(a);
 		}
     }
     
+    public void run2() {
+        // 쓰레드가 실행할 작업 정의
+    	System.out.println();
+    	for (int i = 0; i < 100; i++) {
+    		System.out.print(a);
+		}
+    }
 }
 
  
