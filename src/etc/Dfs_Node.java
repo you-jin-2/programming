@@ -1,6 +1,7 @@
 package etc;
 
-public class Bfs_node   {
+// 알고리즘 DFS
+public class Dfs_Node   {
 	Node2 root;
 
     public void DFS(Node2 root) {
@@ -15,7 +16,7 @@ public class Bfs_node   {
 			   			   	   1
 			   			2			 3
 			   		4	   5  		6   7
-			 전위순회 : 1 - 2 - 4 - 5 - 3 - 6 - 7
+			전위순회 : 1 - 2 - 4 - 5 - 3 - 6 - 7
 			중위순회 : 4 - 2 - 5 - 1 - 6 - 3 - 7
 			후위순회 : 4 - 5 - 2 - 6 - 7 - 3 - 1
  * */
@@ -23,7 +24,7 @@ public class Bfs_node   {
     }
 
     public static void main(String[] args) {
-    	Bfs_node tree = new Bfs_node();
+    	Dfs_Node tree = new Dfs_Node();
         tree.root = new Node2(1);
         tree.root.lt = new Node2(2);
         tree.root.rt = new Node2(3);

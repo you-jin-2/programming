@@ -3,13 +3,16 @@ package etc;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Dfs_node   {
+
+//알고리즘 BFS
+public class Bfs_Node   {
 	Node root;
 
 	public void BFS(Node root) {
         Queue<Node> Q = new LinkedList<>();
         Q.offer(root);
         int L = 0; // level
+        
         while (!Q.isEmpty()) {
             int len = Q.size(); // 레벨 당 원소개수
             System.out.print(L + " : ");
@@ -22,10 +25,11 @@ public class Dfs_node   {
             L++; // level 1 증가
             System.out.println();
         }
+        
     }
 
     public static void main(String[] args) {
-    	Dfs_node tree = new Dfs_node();
+    	Bfs_Node tree = new Bfs_Node();
         tree.root = new Node(1);
         tree.root.lt = new Node(2);
         tree.root.rt = new Node(3);
