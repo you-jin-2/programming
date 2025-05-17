@@ -10,7 +10,7 @@ public class Dfs_Node   {
             System.out.print(root.data + " "); //전위순회
             DFS(root.lt); 
              //System.out.print(root.data + " ");// 중위순회
-            DFS(root.rt);
+            DFS(root.rt); 
             //System.out.print(root.data + " "); //후위순회
 /*
 			   			   	   1
